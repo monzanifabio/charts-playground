@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const t = localStorage.getItem("charts-playground-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pie &amp; Donut — Charts Playground</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <link rel="stylesheet" href="/src/charts.css" />
+  </head>
+  <body>
+    <div class="chart-page">
+      <header class="chart-header">
+        <a href="/" class="back-link">← Charts</a>
+        <h1>Pie &amp; Donut</h1>
+        <p>Traffic sources as a donut and a full pie chart.</p>
+      </header>
+      <div class="pie-row">
+        <div class="pie-col">
+          <p class="pie-label">Donut</p>
+          <canvas id="chart"></canvas>
+        </div>
+        <div class="pie-col">
+          <p class="pie-label">Pie</p>
+          <canvas id="chart-pie"></canvas>
+        </div>
+      </div>
+      <style>
+        .pie-row {
+          display: flex;
+          gap: var(--space-xl);
+        }
+        .pie-col {
+          flex: 1;
+          min-width: 0;
+          max-width: 380px;
+        }
+        .pie-label {
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: var(--color-text);
+          margin-bottom: var(--space-m);
+        }
+      </style>
+    </div>
+    <script type="module" src="./pie.js"></script>
+  </body>
+</html>

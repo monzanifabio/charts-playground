@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const t = localStorage.getItem("charts-playground-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stacked Bar Chart — Charts Playground</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <link rel="stylesheet" href="/src/charts.css" />
+  </head>
+  <body>
+    <div class="chart-page">
+      <header class="chart-header">
+        <a href="/" class="back-link">← Charts</a>
+        <h1>Stacked Bar Chart</h1>
+        <p>Stacked bars showing quarterly budget allocation across departments.</p>
+      </header>
+      <canvas id="chart"></canvas>
+    </div>
+    <script type="module" src="./stacked-bar.js"></script>
+  </body>
+</html>

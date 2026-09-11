@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const t = localStorage.getItem("charts-playground-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Area Chart — Charts Playground</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <link rel="stylesheet" href="/src/charts.css" />
+  </head>
+  <body>
+    <div class="chart-page">
+      <header class="chart-header">
+        <a href="/" class="back-link">← Charts</a>
+        <h1>Area Chart</h1>
+        <p>Monthly active users across three platforms over a year.</p>
+      </header>
+      <canvas id="chart"></canvas>
+      <section class="chart-section">
+        <div class="chart-header">
+          <h2>Linear Interpolation</h2>
+          <p>Same dataset without curve smoothing.</p>
+        </div>
+        <canvas id="chart-linear"></canvas>
+      </section>
+    </div>
+    <script type="module" src="./area.js"></script>
+  </body>
+</html>

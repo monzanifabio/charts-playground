@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const t = localStorage.getItem("charts-playground-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Chart — Charts Playground</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <link rel="stylesheet" href="/src/charts.css" />
+  </head>
+  <body>
+    <div class="chart-page">
+      <header class="chart-header">
+        <a href="/" class="back-link">← Charts</a>
+        <h1>Bar Chart</h1>
+        <p>Grouped bars comparing two data series over 12 months.</p>
+      </header>
+      <canvas id="chart"></canvas>
+      <section class="chart-section">
+        <div class="chart-header">
+          <h2>Daily Visits - October</h2>
+          <p>Single dataset spanning 30 days.</p>
+        </div>
+        <canvas id="chart-daily"></canvas>
+      </section>
+    </div>
+    <script type="module" src="./bar.js"></script>
+  </body>
+</html>

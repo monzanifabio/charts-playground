@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      const t = localStorage.getItem("charts-playground-theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charts Playground</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <style>
+      .index-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--space-2xl) var(--space-l);
+      }
+
+      .index-page > h1 {
+        font-size: clamp(36px, 5vw, 56px);
+        letter-spacing: -1.5px;
+        margin-bottom: var(--space-s);
+      }
+
+      .index-page > p {
+        margin-bottom: var(--space-2xl);
+      }
+
+      .chart-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .chart-table thead th {
+        text-align: left;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text);
+        padding: 0 var(--space-m) var(--space-s);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .chart-table tbody tr {
+        border-bottom: 1px solid var(--color-border);
+        transition: background 0.15s;
+      }
+
+      .chart-table tbody tr:last-child {
+        border-bottom: none;
+      }
+
+      .chart-table tbody tr:hover {
+        background: var(--color-surface);
+      }
+
+      .chart-table td {
+        padding: var(--space-m);
+        vertical-align: middle;
+      }
+
+      .chart-table td:first-child {
+        width: 100%;
+      }
+
+      .chart-table__name {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--color-text-heading);
+        text-decoration: none;
+      }
+
+      .chart-table__name:hover {
+        text-decoration: underline;
+      }
+
+      .chart-table__lib {
+        font-size: 12px;
+        color: var(--color-text);
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="index-page">
+      <h1>Charts Playground</h1>
+      <p>Chart.js explorations — click to open.</p>
+      <table class="chart-table">
+        <thead>
+          <tr>
+            <th>Chart</th>
+            <th>Library</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="chart-table__name" href="/charts/bar.html">Bar</a></td>
+            <td class="chart-table__lib">Chart.js</td>
+          </tr>
+          <tr>
+            <td><a class="chart-table__name" href="/charts/line.html">Line</a></td>
+            <td class="chart-table__lib">Chart.js</td>
+          </tr>
+          <tr>
+            <td><a class="chart-table__name" href="/charts/pie.html">Pie &amp; Donut</a></td>
+            <td class="chart-table__lib">Chart.js</td>
+          </tr>
+          <tr>
+            <td><a class="chart-table__name" href="/charts/stacked-bar.html">Stacked Bar</a></td>
+            <td class="chart-table__lib">Chart.js</td>
+          </tr>
+          <tr>
+            <td><a class="chart-table__name" href="/charts/area.html">Area</a></td>
+            <td class="chart-table__lib">Chart.js</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <script type="module" src="/src/navbar.js"></script>
+  </body>
+</html>
